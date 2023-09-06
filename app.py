@@ -1,7 +1,7 @@
 from tkinter import *
 from Relatorios_SGP import gerar_relatorios_sgp
 from Relatorios_gerais import gerar_relatorios_producao
-from Atualizar_Periodo_db import atualizar_tabela
+from Atualizar_Periodo_db import janela_atualizar_periodo
 
 def main():
     janela = Tk()
@@ -22,7 +22,7 @@ def main():
     botao_relatorio_producao = Button(janela, text='Relatórios de Produção',font=fonte, command=gerar_relatorios_producao, width=largura_botao, height=altura_botão)
     botao_relatorio_producao.grid(column=0, row=2, padx=largura, pady=altura)
 
-    botao_atualizar_bd = Button(janela, text='Atualizar Periodo',font=fonte, command=atualizar_tabela, width=largura_botao, height=altura_botão)
+    botao_atualizar_bd = Button(janela, text='Atualizar Periodo',font=fonte, command=janela_atualizar_periodo, width=largura_botao, height=altura_botão)
     botao_atualizar_bd.grid(column=0, row=3, padx=largura, pady=altura)
 
     rodape = Label(janela, text="Desenvolvido por Diogo Batista ")

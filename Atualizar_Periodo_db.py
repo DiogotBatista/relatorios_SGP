@@ -28,9 +28,9 @@ def janela_principal():
     # Fechar a janela após o término da caixa de diálogo
     root.destroy()
 
-def atualizar_tabela():
+def janela_atualizar_periodo():
     janela_principal()
 
 
 if __name__ == "__main__":
-    atualizar_tabela()
+    janela_atualizar_periodo()
