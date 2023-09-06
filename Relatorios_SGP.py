@@ -82,7 +82,7 @@ def Relatorio_sgp_geral():
     localizar_e_clicar('imagens/cro.png')
     localizar_e_clicar('imagens/filtrar.png')
     time.sleep(2)
-    p.moveTo(769, 878)
+    p.moveTo(1382, 1063)
     p.click()
     esperar_tela_aparecer('imagens/verificacao.png')
     time.sleep(1)
@@ -94,7 +94,7 @@ def Relatorio_sgp_geral():
     # Preparar impressão
     localizar_e_clicar('imagens/print_to_file.png')
     localizar_e_clicar('imagens/type.png')
-    coordenadas = [925, 528, 922, 566]
+    coordenadas = [1080, 614, 1086, 656]
     localizar_e_rolar(coordenadas)
     localizar_e_clicar('imagens/xlsx_date.png')
     localizar_e_clicar('imagens/....png')
@@ -120,10 +120,10 @@ def Abrir_relatorios_acoes():
 def NS_abertas():
     localizar_e_clicar('imagens/filtro_acoes.png')
     localizar_e_clicar('imagens/dt_abertura_acao.png')
-    coordenadas = [625, 303]
+    coordenadas = [785, 390]
     ano = r'1999'
     preencher_datas(coordenadas, ano)
-    coordenadas = [753, 303]
+    coordenadas = [922, 392]
     ano = r'2050'
     preencher_datas(coordenadas, ano)
     localizar_e_clicar('imagens/status.png')
@@ -135,7 +135,7 @@ def NS_abertas():
     # Preparar impressão
     localizar_e_clicar('imagens/print_to_file.png')
     localizar_e_clicar('imagens/type.png')
-    coordenadas = [925, 528, 922, 566]
+    coordenadas = [1080, 614, 1080, 656]
     localizar_e_rolar(coordenadas)
     localizar_e_clicar('imagens/xlsx_date.png')
     localizar_e_clicar('imagens/....png')
@@ -153,13 +153,13 @@ def NS_fechadas():
     localizar_e_clicar('imagens/filtro_acoes_2.png')
     localizar_e_clicar('imagens/dt_fechamento_acao.png')
     # preenche o dia inicial da apuração
-    coordenadas = [584, 299]
+    coordenadas = [744, 395]
     preencher_datas(coordenadas, dia_inicial)
     # preenche o mes inicial da apuração
-    coordenadas = [603, 302]
+    coordenadas = [761, 390]
     preencher_datas(coordenadas, mes_inicial)
     # preenche o ano inicial da apuração
-    coordenadas = [625, 303]
+    coordenadas = [787, 393]
     preencher_datas(coordenadas, ano_inicial)
     localizar_e_clicar('imagens/aberto.png')
     localizar_e_clicar('imagens/todos.png')
@@ -170,7 +170,7 @@ def NS_fechadas():
     # Preparar impressão
     localizar_e_clicar('imagens/print_to_file.png')
     localizar_e_clicar('imagens/type.png')
-    coordenadas = [925, 528, 922, 566]
+    coordenadas = [1080, 614, 1080, 656]
     localizar_e_rolar(coordenadas)
     localizar_e_clicar('imagens/xlsx_date.png')
     localizar_e_clicar('imagens/....png')

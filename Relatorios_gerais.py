@@ -82,15 +82,15 @@ def Relatorio_producao_analitica():
     localizar_e_clicar('imagens/data_de_vencimento_geral.png')
     localizar_e_clicar('imagens/dt_conclusao_acao_analitco.png')
     #preencher dia inicial
-    coordenadas = [683,358]
+    coordenadas = [844,446]
     data = "01"
     preencher_datas(coordenadas,data)
     #preencher mes inicial
-    coordenadas = [704,357]
+    coordenadas = [865,449]
     data = "12"
     preencher_datas(coordenadas,data)
     #preencher ano inicial
-    coordenadas = [729,354]
+    coordenadas = [890,448]
     data = "2022"
     preencher_datas(coordenadas,data)
     # Manda imprimir o relatorio
@@ -102,7 +102,7 @@ def Relatorio_producao_analitica():
     # Preparar impressão
     localizar_e_clicar('imagens/print_to_file.png')
     localizar_e_clicar('imagens/type.png')
-    coordenadas = [925, 528, 922, 566]
+    coordenadas = [1084, 623, 1083, 663]
     localizar_e_rolar(coordenadas)
     localizar_e_clicar('imagens/xlsx_date.png')
     localizar_e_clicar('imagens/....png')
@@ -118,19 +118,19 @@ def Relatorio_producao_analitica():
 def Relatorio_protocolo():
     localizar_e_clicar('imagens/protocolo.png')
     #preencher mes inicial
-    coordenadas = [704,357]
+    coordenadas = [866,447]
     preencher_datas(coordenadas,mes_inicial)
     #preencher ano inicial
-    coordenadas = [729,354]
+    coordenadas = [887,448]
     preencher_datas(coordenadas,ano_inicial)
     #preencher dia final
-    coordenadas = [813,358]
+    coordenadas = [975,450]
     preencher_datas(coordenadas,dia_final)
     #preencher mes final
-    coordenadas = [835,355]
+    coordenadas = [992,447]
     preencher_datas(coordenadas,mes_final)
     # preencher ano final
-    coordenadas = [858, 362]
+    coordenadas = [1020,448]
     preencher_datas(coordenadas, ano_final)
     # Manda imprimir o relatorio
     localizar_e_clicar('imagens/imprimir_geral.png')
@@ -141,7 +141,7 @@ def Relatorio_protocolo():
     # Preparar impressão
     localizar_e_clicar('imagens/print_to_file.png')
     localizar_e_clicar('imagens/type.png')
-    coordenadas = [925, 528, 922, 566]
+    coordenadas = [1084, 623, 1083, 663]
     localizar_e_rolar(coordenadas)
     localizar_e_clicar('imagens/xlsx_date.png')
     localizar_e_clicar('imagens/....png')
