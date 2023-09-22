@@ -47,7 +47,7 @@ def imprimir():
 def imprimir_analitico():
     elemento = None
     while not elemento:
-        elemento = p.locateCenterOnScreen("imagens/page1.png")
+        elemento = p.locateCenterOnScreen("imagens/of2.png")
     impressora = p.locateCenterOnScreen("imagens/impressora.png")
     p.click(impressora[0], impressora[1])
 
@@ -96,8 +96,7 @@ def Relatorio_producao_analitica():
     # Manda imprimir o relatorio
     localizar_e_clicar('imagens/imprimir_geral.png')
     # Solicita impressão do relatorio
-    esperar_tela_aparecer('imagens/logo_cro.png')
-    time.sleep(10)
+    time.sleep(1)
     imprimir_analitico()
     # Preparar impressão
     localizar_e_clicar('imagens/print_to_file.png')
@@ -135,8 +134,7 @@ def Relatorio_protocolo():
     # Manda imprimir o relatorio
     localizar_e_clicar('imagens/imprimir_geral.png')
     # Solicita impressão do relatorio
-    esperar_tela_aparecer('imagens/logo_cro2.png')
-    time.sleep(10)
+    time.sleep(1)
     imprimir()
     # Preparar impressão
     localizar_e_clicar('imagens/print_to_file.png')

@@ -16,16 +16,19 @@ botao_cadastros = [30, 28]
 botao_relatorios = [90, 31]
 botao_obras = [52, 160]
 botao_relatorios_acoes = [133, 75]
+botao_ok = [1079,660]
 
 
 def localizar_e_clicar(imagem):
     elemento = None
     while not elemento:
         elemento = p.locateCenterOnScreen(imagem)
+    print(elemento)
     p.click(elemento[0], elemento[1])
 
 
 def localizar_e_rolar(coordenadas):
+    print(coordenadas)
     p.moveTo(coordenadas[0], coordenadas[1])
     p.mouseDown()
     p.moveTo(coordenadas[2], coordenadas[3])
@@ -43,6 +46,7 @@ def imprimir():
     while not elemento:
         elemento = p.locateOnScreen("imagens/of2.png")
     impressora = p.locateCenterOnScreen("imagens/impressora.png")
+    print(elemento)
     p.click(impressora[0], impressora[1])
 
 
@@ -50,6 +54,7 @@ def localizar_e_preencher(imagem, texto):
     elemento = None
     while not elemento:
         elemento = p.locateCenterOnScreen(imagem)
+    print(elemento)
     p.click(elemento[0], elemento[1], clicks=2)
     k.write(texto)
 
@@ -59,17 +64,20 @@ def aguardar_e_fechar():
     while elemento:
         elemento = p.locateCenterOnScreen("imagens/cancel.png")
     close = p.locateCenterOnScreen("imagens/close.png")
+    print(elemento)
     p.click(close[0], close[1])
 
 
 def preencher_datas(coordenadas, texto):
+    print(coordenadas)
+    print(texto)
     p.click(coordenadas[0], coordenadas[1])
     p.write(texto)
 
 
 def localizar_e_clicar_coordenada(coordenada):
     p.click(coordenada[0], coordenada[1])
-
+    print(coordenada)
 
 def Relatorio_sgp_geral():
     # localizar_e_clicar('imagens/cadastros.png')
@@ -102,7 +110,9 @@ def Relatorio_sgp_geral():
     endereco = sgp_geral
     localizar_e_preencher('imagens/local_nome.png', endereco)
     localizar_e_clicar('imagens/salvar.png')
+    time.sleep(0.5)
     localizar_e_clicar('imagens/ok.png')
+    time.sleep(0.5)
     localizar_e_clicar('imagens/yes.png')
     # aguardar salvamento e fechar tudo
     aguardar_e_fechar()
@@ -178,7 +188,10 @@ def NS_fechadas():
     endereco = acoes_fechadas
     localizar_e_preencher('imagens/local_nome.png', endereco)
     localizar_e_clicar('imagens/salvar.png')
+    time.sleep(0.5)
     localizar_e_clicar('imagens/ok.png')
+    time.sleep(0.5)
+    # localizar_e_clicar_coordenada(botao_ok)
     localizar_e_clicar('imagens/yes.png')
     # aguardar salvamento e fechar o relatorio de impressao
     aguardar_e_fechar()
