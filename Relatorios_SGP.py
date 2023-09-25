@@ -153,6 +153,7 @@ def NS_abertas():
     endereco = acoes_abertas
     localizar_e_preencher('imagens/local_nome.png', endereco)
     localizar_e_clicar('imagens/salvar.png')
+    time.sleep(1)
     localizar_e_clicar('imagens/ok.png')
     localizar_e_clicar('imagens/yes.png')
     # aguardar salvamento e fechar o relatorio de impressao
@@ -188,10 +189,8 @@ def NS_fechadas():
     endereco = acoes_fechadas
     localizar_e_preencher('imagens/local_nome.png', endereco)
     localizar_e_clicar('imagens/salvar.png')
-    time.sleep(0.5)
+    time.sleep(1)
     localizar_e_clicar('imagens/ok.png')
-    time.sleep(0.5)
-    # localizar_e_clicar_coordenada(botao_ok)
     localizar_e_clicar('imagens/yes.png')
     # aguardar salvamento e fechar o relatorio de impressao
     aguardar_e_fechar()
